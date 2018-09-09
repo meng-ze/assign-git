@@ -1,0 +1,17 @@
+• What is a gitignore file and what should it include for a Java project?
+    .gitignore file represents the files that will not be staged into this repository, normally IDE specific files or platform critical or temporary files.
+    If developers accidentally include those files into their repository and push to the remote repository, other developers might clone them into their local repository and thus destroy their file structure (normally path). In a Java project, .gitignore should include project files/path configuration, temporary cache/packages and executables.
+
+• What does fast-forward in Git mean?
+
+    Fast-forward is a kind of merge mechanism. To be more specific, 'fast-forward merge' means merging one branch into others without other modification.
+    For example, consider 2 branches 'master' and 'dev', where 'master' is a parent branch of dev. Under the situation that 'master' is not modified but 'dev' has been modified, if a user wants to merge 'dev' branch into 'master' branch, that user could merge 'dev' branch into 'master' branch without confliction.
+    This is the scenario of fast-forward merge.
+
+• Why should you have different branches?
+
+    First of all, developers always want to ensure at least a stable version of their software. If there is only one branch, every change will be recorded/committed into that branch and thus make that branch unstable. Secondly, multiple branches facilitate the developing procedure without harm others' environment. Considering multiple users are developing multiple features, developers can create their own branch to test their code without influence others' workload. If they all developing in the same branch, it will be very hard to test the correctness of their current work.
+
+• In a project how many remote Git repositories do you usually have?
+
+    Normally one is enough, even if there are a large number of developers in the same project. Every local repository would record the entire git history for the system. Even if that 'only' repository is broken, developers can still recover the remote repository from their local computers.
